@@ -76,7 +76,7 @@ function onDeviceReady() {
 	);
 	
 	
-/* 	
+	
 	bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
@@ -87,16 +87,11 @@ function onDeviceReady() {
         app.receivedEvent('deviceready');
         initPushwoosh();
     },
- */
+
 }
 
 
 
-
-
-
-
-/* 
 pushwoosh.registerDevice(
   function(status) {
     var pushToken = status.pushToken;
@@ -128,7 +123,7 @@ function initPushwoosh() {
   });
 }
 
- */
+
 
 
 
