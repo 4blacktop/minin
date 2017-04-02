@@ -94,7 +94,7 @@ function initPushwoosh()
             console.warn('user data: ' + JSON.stringify(userData));
         }
                                      
-        myApp.alert(title);
+        alert(title);
     });
  
     //initialize Pushwoosh with projectid: "GOOGLE_PROJECT_ID", pw_appid : "PUSHWOOSH_APP_ID". This will trigger all pending push notifications on start.
@@ -102,12 +102,15 @@ function initPushwoosh()
  
     //register for pushes
     pushNotification.registerDevice(
+        alert('registerDevice');
         function(status) {
             var pushToken = status;
-            console.warn('push token: ' + pushToken);
+            // console.warn('push token: ' + pushToken);
+        alert('push token: ' + pushToken);
         },
         function(status) {
-            console.warn(JSON.stringify(['failed to register ', status]));
+            // console.warn(JSON.stringify(['failed to register ', status]));
+            alert('JSON.stringify(['failed to register ', status]));
         }
     );
 }	
