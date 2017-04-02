@@ -110,7 +110,7 @@ function initPushwoosh()
         },
         function(status) {
             // console.warn(JSON.stringify(['failed to register ', status]));
-            alert('JSON.stringify(['failed to register ', status]));
+            alert(JSON.stringify(['failed to register ', status]));
         }
     );
 }	
