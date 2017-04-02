@@ -1,11 +1,9 @@
-alert('start');
+	alert('start');
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
 	alert('onDeviceReady');
-	// initPushwoosh();
-	
-/* 	
+	initPushwoosh();
 	// var ref = window.open('http://miracas.com/push', '_blank', 'location=no,zoom=no');
 	var ref = window.open('http://27podarkov.ru', '_blank', 'location=no,zoom=no');
 	ref.addEventListener('loadstart', inAppBrowserbLoadStart);
@@ -26,24 +24,9 @@ function onDeviceReady() {
     function inAppBrowserbLoadError(event) {
 		window.plugins.spinnerDialog.hide();
 	}	
-	 */
 }
 
-document.addEventListener("offline", onOffline, false);
- 
-function onOffline() {
-	alert('online');
-    // Handle the offline event 
-}
-
-document.addEventListener("online", onOnline, false);
- 
-function onOnline() {
-	alert('offline');
-    // Handle the online event 
-}
-
-/* 				
+				
 document.addEventListener('push-notification', function(event) {
     //event.notification is a JSON push notifications payload
     var title = event.notification.title;
@@ -56,7 +39,7 @@ document.addEventListener('push-notification', function(event) {
     //we might want to display an alert with push notifications title
     //alert(title);
 });
- */	
+	
 
 	/* 		
 function initPushwoosh()
@@ -96,7 +79,7 @@ function initPushwoosh()
     );
 }	
  */
-/* 
+
 function initPushwoosh()
 {
 	alert('initPushwoosh');
@@ -130,4 +113,4 @@ function initPushwoosh()
             // alert(JSON.stringify(['failed to register ', status]));
         }
     );
-}	 */
+}	
