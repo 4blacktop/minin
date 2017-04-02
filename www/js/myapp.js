@@ -18,10 +18,10 @@ function onDeviceReady() {
 			alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
 			
 			if (results.buttonIndex == 2) {
-			  alert( 'You choose Exit' );
-			// navigator.app.exitApp();
+			  // alert( 'You choose Exit' );
+			navigator.app.exitApp();
 			} else {
-			  alert( 'You choose Stay' ); 
+			  // alert( 'You choose Stay' ); 
 			}
 			
 		}
@@ -30,8 +30,7 @@ function onDeviceReady() {
 			'Do you want to exit?',  // message
 			onPrompt,                  // callback to invoke
 			'Title',            // title
-			['Stay','Exit'],             // buttonLabels
-			'Default text'                 // defaultText
+			['Stay','Exit']            // buttonLabels
 		);
 	});
 	
@@ -49,14 +48,25 @@ function onDeviceReady() {
 		alert('inAppBrowserbLoadError');
 	}	
 	
-	alert("device.cordova: " + device.cordova);
-	alert("device.model: " + device.model);
-	alert("device.platform: " + device.platform);
-	alert("device.uuid: " + device.uuid);
-	alert("device.version: " + device.version);
-	alert("device.manufacturer: " + device.manufacturer);
-	alert("device.isVirtual: " + device.isVirtual);
-	alert("device.serial: " + device.serial);
+	alert(
+	"device.cordova: " + device.cordova + "\n"
+	"device.model: " + device.model + "\n"
+	"device.platform: " + device.platform + "\n"
+	"device.uuid: " + device.uuid + "\n"
+	"device.version: " + device.version + "\n"
+	"device.manufacturer: " + device.manufacturer + "\n"
+	"device.isVirtual: " + device.isVirtual + "\n"
+	"device.serial: " + device.serial + "\n"
+	);
+	
+	
+	// alert("device.model: " + device.model);
+	// alert("device.platform: " + device.platform);
+	// alert("device.uuid: " + device.uuid);
+	// alert("device.version: " + device.version);
+	// alert("device.manufacturer: " + device.manufacturer);
+	// alert("device.isVirtual: " + device.isVirtual);
+	// alert("device.serial: " + device.serial);
 	
 	
 	
