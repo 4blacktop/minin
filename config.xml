@@ -9,7 +9,10 @@
 	<author href="http://vladimirklochkov.ru" email="4blogga@gmail.com">Vladimir Klochkov</author>
 
 	
-    <plugin name="com.phonegap.plugins.barcodescanner"  source="npm" /> 
+    <plugin name="pushwoosh-pgb-plugin" source="npm" />
+	<access origin="*"/> <!-- allow all pages, use for development -->
+	<access origin="*.pushwoosh.com"/> <!-- allow pushwoosh service -->
+	
 	<plugin name="cordova-plugin-splashscreen" spec="~4.0.1" /> 
 	<preference name="ShowSplashScreenSpinner" value="false"/>
 
