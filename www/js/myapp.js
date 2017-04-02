@@ -1,3 +1,26 @@
+/* 	alert( 
+	"device.cordova: " + device.cordova + "\n"
+	"device.model: " + device.model + "\n"
+	"device.platform: " + device.platform + "\n"
+	"device.uuid: " + device.uuid + "\n"
+	"device.version: " + device.version + "\n"
+	"device.manufacturer: " + device.manufacturer + "\n"
+	"device.isVirtual: " + device.isVirtual + "\n"
+	"device.serial: " + device.serial + "\n"
+	);  */
+	
+/* 		alert( 
+	"device.cordova: " + device.cordova + "\n"
+	"device.model: " + device.model + "\n"
+	"device.platform: " + device.platform + "\n"
+	"device.uuid: " + device.uuid + "\n"
+	"device.version: " + device.version + "\n"
+	"device.manufacturer: " + device.manufacturer + "\n"
+	"device.isVirtual: " + device.isVirtual + "\n"
+	"device.serial: " + device.serial + "\n"
+	);  */
+
+
 // alert('start');
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -14,25 +37,23 @@ function onDeviceReady() {
 	ref.addEventListener('exit', function() {
 		
 		
-	function onPrompt(results) {
-			alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
-			
-			if (results.buttonIndex == 2) {
-			  // alert( 'You choose Exit' );
+		
+	function onConfirm(buttonIndex) {// alert('You selected button ' + buttonIndex);
+		if (results.buttonIndex == 2) {// alert( 'You choose Exit' );
 			navigator.app.exitApp();
-			} else {
-			  // alert( 'You choose Stay' ); 
-			}
-			
+		} else {// alert( 'You choose Stay' ); 
+			var ref = cordova.InAppBrowser.open('https://google.com', '_blank', 'location=no,zoom=no');
 		}
+	}
 
-		navigator.notification.prompt(
-			'Do you want to exit?',  // message
-			onPrompt,                  // callback to invoke
-			'App Title',            // title
-			['Stay','Exit']            // buttonLabels
-		);
-	});
+	navigator.notification.confirm(
+		'Do you want to exit?', // message
+		 onConfirm,            // callback to invoke with index of button pressed
+		'App Title',           // title
+		['Stay','Exit']     // buttonLabels
+	);
+		
+
 	
 
    function inAppBrowserbLoadStart(event) {
@@ -54,18 +75,7 @@ function onDeviceReady() {
 		function () {alert('Error getting language\n');}
 	);
 	
-	/*alert( 
-	"device.cordova: " + device.cordova + "\n"
-	"device.model: " + device.model + "\n"
-	"device.platform: " + device.platform + "\n"
-	"device.uuid: " + device.uuid + "\n"
-	"device.version: " + device.version + "\n"
-	"device.manufacturer: " + device.manufacturer + "\n"
-	"device.isVirtual: " + device.isVirtual + "\n"
-	"device.serial: " + device.serial + "\n"
-	); */
-	
-	
+
 	alert("device.cordova: " + device.cordova);
 	alert("device.model: " + device.model);
 	alert("device.platform: " + device.platform);
@@ -74,9 +84,6 @@ function onDeviceReady() {
 	alert("device.manufacturer: " + device.manufacturer);
 	alert("device.isVirtual: " + device.isVirtual);
 	alert("device.serial: " + device.serial);
-	
-	
-	
 	
 	function alertDismissed() {
 		// do something
@@ -90,31 +97,6 @@ function onDeviceReady() {
 		'Done'                  // buttonName
 	);
 
-
-	
-	
-
-	// alert("getPreferredLanguage: " + navigator.globalization.getPreferredLanguage);
-	// alert("getLocaleName: " + navigator.globalization.getLocaleName);
-	// alert("dateToString: " + navigator.globalization.dateToString);
-	// alert("stringToDate: " + navigator.globalization.stringToDate);
-	// alert("getDatePattern: " + navigator.globalization.getDatePattern);
-	// alert("getDateNames: " + navigator.globalization.getDateNames);
-	// alert("isDayLightSavingsTime: " + navigator.globalization.isDayLightSavingsTime);
-	// alert("getFirstDayOfWeek: " + navigator.globalization.getFirstDayOfWeek);
-	// alert("numberToString: " + navigator.globalization.numberToString);
-	// alert("stringToNumber: " + navigator.globalization.stringToNumber);
-	// alert("getNumberPattern: " + navigator.globalization.getNumberPattern);
-	// alert("getCurrencyPattern: " + navigator.globalization.getCurrencyPattern);
-	// alert("getPreferredLanguage: " + navigator.globalization.getPreferredLanguage);
-	// alert("getPreferredLanguage: " + navigator.globalization.getPreferredLanguage);
-	// alert("getPreferredLanguage: " + navigator.globalization.getPreferredLanguage);
-	// alert("getPreferredLanguage: " + navigator.globalization.getPreferredLanguage);
-
-
-	
-/* 	
-	 */
 }
 
 document.addEventListener("offline", onOffline, false);
