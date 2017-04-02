@@ -77,7 +77,6 @@ function onDeviceReady() {
 	
 	
 
-	app.receivedEvent('deviceready');
 	initPushwoosh();
 	alert('initPushwoosh deviceready');
 }
