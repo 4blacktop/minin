@@ -29,7 +29,7 @@ function onDeviceReady() {
 		navigator.notification.prompt(
 			'Do you want to exit?',  // message
 			onPrompt,                  // callback to invoke
-			'Title',            // title
+			'App Title',            // title
 			['Stay','Exit']            // buttonLabels
 		);
 	});
@@ -48,7 +48,13 @@ function onDeviceReady() {
 		alert('inAppBrowserbLoadError');
 	}	
 	
-	alert(
+	
+	navigator.globalization.getPreferredLanguage(
+		function (language) {alert('language: ' + language.value + '\n');},
+		function () {alert('Error getting language\n');}
+	);
+	
+	/*alert( 
 	"device.cordova: " + device.cordova + "\n"
 	"device.model: " + device.model + "\n"
 	"device.platform: " + device.platform + "\n"
@@ -57,16 +63,17 @@ function onDeviceReady() {
 	"device.manufacturer: " + device.manufacturer + "\n"
 	"device.isVirtual: " + device.isVirtual + "\n"
 	"device.serial: " + device.serial + "\n"
-	);
+	); */
 	
 	
-	// alert("device.model: " + device.model);
-	// alert("device.platform: " + device.platform);
-	// alert("device.uuid: " + device.uuid);
-	// alert("device.version: " + device.version);
-	// alert("device.manufacturer: " + device.manufacturer);
-	// alert("device.isVirtual: " + device.isVirtual);
-	// alert("device.serial: " + device.serial);
+	alert("device.cordova: " + device.cordova);
+	alert("device.model: " + device.model);
+	alert("device.platform: " + device.platform);
+	alert("device.uuid: " + device.uuid);
+	alert("device.version: " + device.version);
+	alert("device.manufacturer: " + device.manufacturer);
+	alert("device.isVirtual: " + device.isVirtual);
+	alert("device.serial: " + device.serial);
 	
 	
 	
@@ -86,10 +93,7 @@ function onDeviceReady() {
 
 	
 	
-	navigator.globalization.getPreferredLanguage(
-    function (language) {alert('language: ' + language.value + '\n');},
-    function () {alert('Error getting language\n');}
-	);
+
 	// alert("getPreferredLanguage: " + navigator.globalization.getPreferredLanguage);
 	// alert("getLocaleName: " + navigator.globalization.getLocaleName);
 	// alert("dateToString: " + navigator.globalization.dateToString);
