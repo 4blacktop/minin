@@ -60,7 +60,7 @@ function initPushwoosh()
 	pushwoosh.onDeviceReady({
 		appid: "3B25F-AAA89",
 		projectid: "979133330228",
-		serviceName: ""
+		serviceName: "MPNS_SERVICE_NAME"
 	});
  
     //register for pushes
