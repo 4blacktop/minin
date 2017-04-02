@@ -74,8 +74,77 @@ function onDeviceReady() {
 		'Native notification Example',            // title
 		'Done'                  // buttonName
 	);
+	
+	
+	
+	bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // 'this' covers the event. To call 'receivedEvent' function, explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+        app.receivedEvent('deviceready');
+        initPushwoosh();
+    },
 
 }
+
+
+
+pushwoosh.registerDevice(
+  function(status) {
+    var pushToken = status.pushToken;
+      // handle successful registration here
+  },
+  function(status) {
+    // handle registration error here
+  }
+);
+
+
+
+function initPushwoosh() {
+  var pushwoosh = cordova.require("pushwoosh-cordova-plugin.PushNotification");
+
+  // Should be called before pushwoosh.onDeviceReady
+  document.addEventListener('push-notification', function(event) {
+    var notification = event.notification;
+    // handle push open here
+  });
+  
+
+  
+  // Initialize Pushwoosh. This will trigger all pending push notifications on start.
+  pushwoosh.onDeviceReady({
+    appid: "3B25F-AAA89",
+    projectid: "979133330228",
+    serviceName: "MPNS_SERVICE_NAME"
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 window.setTimeout( function() {
    alert('ad1');

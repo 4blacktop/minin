@@ -9,7 +9,7 @@
 	<author href="http://vladimirklochkov.ru" email="4blogga@gmail.com">Vladimir Klochkov</author>
 
 	
-    <plugin name="pushwoosh-pgb-plugin" source="npm" />
+    <gap:plugin name="pushwoosh-pgb-plugin" source="npm" />
 	<access origin="*"/> <!-- allow all pages, use for development -->
 	<access origin="*.pushwoosh.com"/> <!-- allow pushwoosh service -->
 	
