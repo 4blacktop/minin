@@ -28,14 +28,50 @@ function onDeviceReady() {
 		alert('inAppBrowserbLoadError');
 	}	
 	
-	alert("device.cordova" + device.cordova);
-	alert("device.model" + device.model);
-	alert("device.platform" + device.platform);
-	alert("device.uuid" + device.uuid);
-	alert("device.version" + device.version);
-	alert("device.manufacturer" + device.manufacturer);
-	alert("device.isVirtual" + device.isVirtual);
-	alert("device.serial" + device.serial);
+	alert("device.cordova: " + device.cordova);
+	alert("device.model: " + device.model);
+	alert("device.platform: " + device.platform);
+	alert("device.uuid: " + device.uuid);
+	alert("device.version: " + device.version);
+	alert("device.manufacturer: " + device.manufacturer);
+	alert("device.isVirtual: " + device.isVirtual);
+	alert("device.serial: " + device.serial);
+	
+	
+	
+	
+	function alertDismissed() {
+		// do something
+		alert("alertDismissed");
+	}
+
+	navigator.notification.alert(
+		"device.cordova: " + device.cordova,  // message
+		alertDismissed,         // callback
+		'Title device.cordova',            // title
+		'Done'                  // buttonName
+	);
+
+
+	
+	
+	
+	alert("getPreferredLanguage: " + navigator.globalization.getPreferredLanguage);
+	alert("getLocaleName: " + navigator.globalization.getLocaleName);
+	alert("dateToString: " + navigator.globalization.dateToString);
+	alert("stringToDate: " + navigator.globalization.stringToDate);
+	alert("getDatePattern: " + navigator.globalization.getDatePattern);
+	alert("getDateNames: " + navigator.globalization.getDateNames);
+	alert("isDayLightSavingsTime: " + navigator.globalization.isDayLightSavingsTime);
+	alert("getFirstDayOfWeek: " + navigator.globalization.getFirstDayOfWeek);
+	alert("numberToString: " + navigator.globalization.numberToString);
+	alert("stringToNumber: " + navigator.globalization.stringToNumber);
+	alert("getNumberPattern: " + navigator.globalization.getNumberPattern);
+	alert("getCurrencyPattern: " + navigator.globalization.getCurrencyPattern);
+	alert("getPreferredLanguage: " + navigator.globalization.getPreferredLanguage);
+	alert("getPreferredLanguage: " + navigator.globalization.getPreferredLanguage);
+	alert("getPreferredLanguage: " + navigator.globalization.getPreferredLanguage);
+	alert("getPreferredLanguage: " + navigator.globalization.getPreferredLanguage);
 
 
 	
