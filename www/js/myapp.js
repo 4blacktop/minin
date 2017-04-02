@@ -2,7 +2,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
 	initPushwoosh();
-	var ref = window.open('http://miracas.com/push', '_blank', 'location=no,zoom=no');
+	// var ref = window.open('http://miracas.com/push', '_blank', 'location=no,zoom=no');
+	var ref = window.open('http://27podarkov.ru', '_blank', 'location=no,zoom=no');
 	ref.addEventListener('loadstart', inAppBrowserbLoadStart);
 	ref.addEventListener('loadstop', inAppBrowserbLoadStop);
 	ref.addEventListener('loaderror', inAppBrowserbLoadError);
