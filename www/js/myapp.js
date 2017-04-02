@@ -14,7 +14,6 @@ function onDeviceReady() {
 		navigator.app.exitApp();
 	});
 	
-/* 	
    function inAppBrowserbLoadStart(event) {
 	    window.plugins.spinnerDialog.show(null, null, true);
     }
@@ -26,6 +25,7 @@ function onDeviceReady() {
     function inAppBrowserbLoadError(event) {
 		window.plugins.spinnerDialog.hide();
 	}	
+/* 	
 	 */
 }
 
