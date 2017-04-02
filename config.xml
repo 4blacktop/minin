@@ -24,7 +24,7 @@
     <!-- <feature name="http://api.phonegap.com/1.0/device" /> -->
 	
 	<!-- https://www.npmjs.com/package/cordova-plugin-admob-simple -->
-	<gap:plugin name="cordova-plugin-admob-simple" source="npm"/>
+	<!-- <gap:plugin name="cordova-plugin-admob-simple" source="npm"/> -->
 
     <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="orientation"      value="portrait" />
