@@ -87,8 +87,9 @@ function onDeviceReady() {
 
 
 
-
+alert('bp1');
 pushwoosh.registerDevice(
+alert('bp2');
   function(status) {
     var pushToken = status.pushToken;
       // handle successful registration here
@@ -99,6 +100,7 @@ pushwoosh.registerDevice(
 	  alert('pushwoosh.registerDevice registration error: ' + status );
   }
 );
+alert('bp3');
 
 
 
