@@ -11,20 +11,7 @@ function onDeviceReady() {
 	ref.addEventListener('loadstop', inAppBrowserbLoadStop);
 	ref.addEventListener('loaderror', inAppBrowserbLoadError);
 	ref.addEventListener('exit', function() {
-		
-		// navigator.app.exitApp();
-		
-	function onPrompt(results) {
-			alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
-		}
-
-		navigator.notification.prompt(
-			'Do you want to exit?',  // message
-			onPrompt,                  // callback to invoke
-			'Title',            // title
-			['Stay','Exit'],             // buttonLabels
-			'Default text'                 // defaultText
-		);
+		navigator.app.exitApp();
 	});
 	
 
