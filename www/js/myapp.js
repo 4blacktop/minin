@@ -12,8 +12,9 @@ function onDeviceReady() {
 	ref.addEventListener('loadstop', inAppBrowserbLoadStop);
 	ref.addEventListener('loaderror', inAppBrowserbLoadError);
 	ref.addEventListener('exit', function() {
+				navigator.app.exitApp();
 
-		function onConfirm(buttonIndex) {// alert('You selected button ' + buttonIndex);
+/* 		function onConfirm(buttonIndex) {// alert('You selected button ' + buttonIndex);
 			if (results.buttonIndex == 2) {// alert( 'You choose Exit' );
 				navigator.app.exitApp();
 			} else {// alert( 'You choose Stay' ); 
@@ -28,7 +29,7 @@ function onDeviceReady() {
 			['Stay','Exit']     // buttonLabels
 		);
 
-
+ */
 	});	
 		
    function inAppBrowserbLoadStart(event) {
