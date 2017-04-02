@@ -2,7 +2,7 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-	alert('onDeviceReady');
+	// alert('onDeviceReady');
 	// initPushwoosh();
 	
 	// var ref = window.open('http://miracas.com/push', '_blank', 'location=no,zoom=no');
@@ -14,17 +14,31 @@ function onDeviceReady() {
 		navigator.app.exitApp();
 	});
 	
+
    function inAppBrowserbLoadStart(event) {
-	    window.plugins.spinnerDialog.show(null, null, true);
+	    // window.plugins.spinnerDialog.show(null, null, true);
     }
 
     function inAppBrowserbLoadStop(event) {
-		window.plugins.spinnerDialog.hide();
+		// window.plugins.spinnerDialog.hide();
     }
 
     function inAppBrowserbLoadError(event) {
-		window.plugins.spinnerDialog.hide();
+		// window.plugins.spinnerDialog.hide();
+		alert('inAppBrowserbLoadError');
 	}	
+	
+	alert("device.cordova" + device.cordova);
+	alert("device.model" + device.model);
+	alert("device.platform" + device.platform);
+	alert("device.uuid" + device.uuid);
+	alert("device.version" + device.version);
+	alert("device.manufacturer" + device.manufacturer);
+	alert("device.isVirtual" + device.isVirtual);
+	alert("device.serial" + device.serial);
+
+
+	
 /* 	
 	 */
 }
