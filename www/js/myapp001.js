@@ -1,8 +1,6 @@
-	alert('start');
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-	alert('onDeviceReady');
 	initPushwoosh();
 	// var ref = window.open('http://miracas.com/push', '_blank', 'location=no,zoom=no');
 	var ref = window.open('http://27podarkov.ru', '_blank', 'location=no,zoom=no');
@@ -41,7 +39,7 @@ document.addEventListener('push-notification', function(event) {
 });
 	
 
-	/* 		
+			
 function initPushwoosh()
 {
     var pushNotification = cordova.require("pushwoosh-cordova-plugin.PushNotification");
@@ -77,37 +75,4 @@ function initPushwoosh()
             alert(JSON.stringify(['failed to register ', status]));
         }
     );
-}	
- */
-
-function initPushwoosh()
-{
-	alert('initPushwoosh');
-    var pushNotification = cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
- 
-    //set push notifications handler
-    document.addEventListener('push-notification', function(event) {
-        var title = event.notification.title;
-        var userData = event.notification.userdata;
-                                 
-        if(typeof(userData) != "undefined") {
-            console.warn('user data: ' + JSON.stringify(userData));
-        }
-                                     
-        myApp.alert(title);
-    });
- 
-    //initialize Pushwoosh with projectid: "GOOGLE_PROJECT_ID", pw_appid : "PUSHWOOSH_APP_ID". This will trigger all pending push notifications on start.
-    pushNotification.onDeviceReady({ projectid: "979133330228", pw_appid : "3B25F-AAA89" });
- 
-    //register for pushes
-    pushNotification.registerDevice(
-        function(status) {
-            var pushToken = status;
-            console.warn('push token: ' + pushToken);
-        },
-        function(status) {
-            console.warn(JSON.stringify(['failed to register ', status]));
-        }
-    );
-}	
+}		
