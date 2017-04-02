@@ -12,8 +12,6 @@
     <plugin name="pushwoosh-pgb-plugin" source="npm" />
 	<access origin="*"/> <!-- allow all pages, use for development -->
 	<access origin="*.pushwoosh.com"/> <!-- allow pushwoosh service -->
-	<!-- <access origin="*.google.com"/> 
-	<access origin="*.google.ru"/>  -->
 	
 	<plugin name="cordova-plugin-splashscreen" spec="~4.0.1" /> 
 	<preference name="ShowSplashScreenSpinner" value="false"/>

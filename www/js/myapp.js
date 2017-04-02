@@ -1,26 +1,3 @@
-/* 	alert( 
-	"device.cordova: " + device.cordova + "\n"
-	"device.model: " + device.model + "\n"
-	"device.platform: " + device.platform + "\n"
-	"device.uuid: " + device.uuid + "\n"
-	"device.version: " + device.version + "\n"
-	"device.manufacturer: " + device.manufacturer + "\n"
-	"device.isVirtual: " + device.isVirtual + "\n"
-	"device.serial: " + device.serial + "\n"
-	);  */
-	
-/* 		alert( 
-	"device.cordova: " + device.cordova + "\n"
-	"device.model: " + device.model + "\n"
-	"device.platform: " + device.platform + "\n"
-	"device.uuid: " + device.uuid + "\n"
-	"device.version: " + device.version + "\n"
-	"device.manufacturer: " + device.manufacturer + "\n"
-	"device.isVirtual: " + device.isVirtual + "\n"
-	"device.serial: " + device.serial + "\n"
-	);  */
-
-
 // alert('start');
 document.addEventListener("deviceready", onDeviceReady, false);
 
@@ -35,27 +12,25 @@ function onDeviceReady() {
 	ref.addEventListener('loadstop', inAppBrowserbLoadStop);
 	ref.addEventListener('loaderror', inAppBrowserbLoadError);
 	ref.addEventListener('exit', function() {
-		
-		
-		
-	function onConfirm(buttonIndex) {// alert('You selected button ' + buttonIndex);
-		if (results.buttonIndex == 2) {// alert( 'You choose Exit' );
-			navigator.app.exitApp();
-		} else {// alert( 'You choose Stay' ); 
-			var ref = cordova.InAppBrowser.open('https://google.com', '_blank', 'location=no,zoom=no');
+
+		function onConfirm(buttonIndex) {// alert('You selected button ' + buttonIndex);
+			if (results.buttonIndex == 2) {// alert( 'You choose Exit' );
+				navigator.app.exitApp();
+			} else {// alert( 'You choose Stay' ); 
+				var ref = cordova.InAppBrowser.open('https://google.com', '_blank', 'location=no,zoom=no');
+			}
 		}
-	}
 
-	navigator.notification.confirm(
-		'Do you want to exit?', // message
-		 onConfirm,            // callback to invoke with index of button pressed
-		'App Title',           // title
-		['Stay','Exit']     // buttonLabels
-	);
+		navigator.notification.confirm(
+			'Do you want to exit?', // message
+			 onConfirm,            // callback to invoke with index of button pressed
+			'App Title',           // title
+			['Stay','Exit']     // buttonLabels
+		);
+
+
+	});	
 		
-
-	
-
    function inAppBrowserbLoadStart(event) {
 	    // window.plugins.spinnerDialog.show(null, null, true);
     }
@@ -85,15 +60,14 @@ function onDeviceReady() {
 	alert("device.isVirtual: " + device.isVirtual);
 	alert("device.serial: " + device.serial);
 	
-	function alertDismissed() {
-		// do something
-		// alert("alertDismissed");
+	function alertDismissed() {// alert("alertDismissed");
+		
 	}
 
 	navigator.notification.alert(
 		"device.cordova: " + device.cordova,  // message
 		alertDismissed,         // callback
-		'Native notification',            // title
+		'Native notification Example',            // title
 		'Done'                  // buttonName
 	);
 
