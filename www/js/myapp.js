@@ -87,20 +87,7 @@ function onDeviceReady() {
 
 
 
-alert('bp1');
-pushwoosh.registerDevice(
-// alert('bp2');
-  function(status) {
-    var pushToken = status.pushToken;
-      // handle successful registration here
-	  alert('pushwoosh.registerDevice successful registration: ' + pushToken );
-  },
-  function(status) {
-    // handle registration error here
-	  alert('pushwoosh.registerDevice registration error: ' + status );
-  }
-);
-alert('bp3');
+
 
 
 
@@ -116,12 +103,30 @@ function initPushwoosh() {
   
 
   
+
+  
   // Initialize Pushwoosh. This will trigger all pending push notifications on start.
   pushwoosh.onDeviceReady({
     appid: "3B25F-AAA89",
     projectid: "979133330228"
   });
     // serviceName: "MPNS_SERVICE_NAME"
+	
+	
+	  alert('bp1');
+pushwoosh.registerDevice(
+// alert('bp2');
+  function(status) {
+    var pushToken = status.pushToken;
+      // handle successful registration here
+	  alert('pushwoosh.registerDevice successful registration: ' + pushToken );
+  },
+  function(status) {
+    // handle registration error here
+	  alert('pushwoosh.registerDevice registration error: ' + status );
+  }
+);
+alert('bp3');
 }
 
 
