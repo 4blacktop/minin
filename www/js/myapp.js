@@ -45,7 +45,7 @@ function onDeviceReady() {
 
     function inAppBrowserbLoadError(event) {
 		// window.plugins.spinnerDialog.hide();
-		alert('inAppBrowserbLoadError');
+		// alert('inAppBrowserbLoadError');
 	}	
 	
 	
@@ -71,14 +71,14 @@ function onDeviceReady() {
 	navigator.notification.alert(
 		"device.cordova: " + device.cordova,  // message
 		alertDismissed,         // callback
-		'Native notification Example',            // title
+		'Native notification alert Example',            // title
 		'Done'                  // buttonName
 	);
 	
 	
 
 	initPushwoosh();
-	alert('initPushwoosh deviceready');
+	// alert('initPushwoosh deviceready');
 }
 
 
@@ -92,7 +92,7 @@ function onDeviceReady() {
 
 
 function initPushwoosh() {
-	alert('initPushwoosh');
+	// alert('initPushwoosh');
   var pushwoosh = cordova.require("pushwoosh-cordova-plugin.PushNotification");
 
   // Should be called before pushwoosh.onDeviceReady
@@ -113,20 +113,20 @@ function initPushwoosh() {
     // serviceName: "MPNS_SERVICE_NAME"
 	
 	
-	  alert('bp1');
+	  // alert('bp1');
 pushwoosh.registerDevice(
 // alert('bp2');
   function(status) {
     var pushToken = status.pushToken;
       // handle successful registration here
-	  alert('pushwoosh.registerDevice successful registration: ' + pushToken );
+	  // alert('pushwoosh.registerDevice successful registration: ' + pushToken );
   },
   function(status) {
     // handle registration error here
-	  alert('pushwoosh.registerDevice registration error: ' + status );
+	  // alert('pushwoosh.registerDevice registration error: ' + status );
   }
 );
-alert('bp3');
+// alert('bp3');
 }
 
 
