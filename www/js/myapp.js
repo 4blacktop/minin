@@ -79,7 +79,7 @@ function onDeviceReady() {
 
 	app.receivedEvent('deviceready');
 	initPushwoosh();
-
+	alert('initPushwoosh deviceready');
 }
 
 
@@ -93,15 +93,18 @@ pushwoosh.registerDevice(
   function(status) {
     var pushToken = status.pushToken;
       // handle successful registration here
+	  alert('pushwoosh.registerDevice successful registration: ' + pushToken );
   },
   function(status) {
     // handle registration error here
+	  alert('pushwoosh.registerDevice registration error: ' + status );
   }
 );
 
 
 
 function initPushwoosh() {
+	alert('initPushwoosh');
   var pushwoosh = cordova.require("pushwoosh-cordova-plugin.PushNotification");
 
   // Should be called before pushwoosh.onDeviceReady
