@@ -37,7 +37,9 @@
     <preference name="webviewbounce"    value="false" />
 	<preference name="android-build-tool" value="gradle" />
 	
-	
+	<application android:theme="@android:style/Theme.NoTitleBar" >
+		<activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ></activity>
+	</application>
 	
 
     <icon src="icon.png" />
