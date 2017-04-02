@@ -77,16 +77,8 @@ function onDeviceReady() {
 	
 	
 
-	bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // 'this' covers the event. To call 'receivedEvent' function, explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-        initPushwoosh();
-    },
+	app.receivedEvent('deviceready');
+	initPushwoosh();
 
 }
 
