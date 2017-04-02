@@ -37,10 +37,6 @@
     <preference name="webviewbounce"    value="false" />
 	<preference name="android-build-tool" value="gradle" />
 	
-	<application android:theme="@android:style/Theme.NoTitleBar" >
-		<activity android:theme="@android:style/Theme.NoTitleBar.Fullscreen" ></activity>
-	</application>
-	
 
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />

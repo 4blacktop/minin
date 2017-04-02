@@ -76,7 +76,7 @@ function onDeviceReady() {
 	);
 	
 	
-/* 	
+
 	bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
@@ -87,7 +87,7 @@ function onDeviceReady() {
         app.receivedEvent('deviceready');
         initPushwoosh();
     },
- */
+
 }
 
 
@@ -96,7 +96,7 @@ function onDeviceReady() {
 
 
 
-/* 
+
 pushwoosh.registerDevice(
   function(status) {
     var pushToken = status.pushToken;
@@ -123,12 +123,12 @@ function initPushwoosh() {
   // Initialize Pushwoosh. This will trigger all pending push notifications on start.
   pushwoosh.onDeviceReady({
     appid: "3B25F-AAA89",
-    projectid: "979133330228",
-    serviceName: "MPNS_SERVICE_NAME"
+    projectid: "979133330228"
   });
+    // serviceName: "MPNS_SERVICE_NAME"
 }
 
- */
+
 
 
 
