@@ -31,6 +31,9 @@ function onDeviceReady() {
 
  */
 	});	
+	
+	// https://www.npmjs.com/package/admob	
+	("admob banner ID","admob interstitial ID");//admob id format ca-app-pub-xxxxxxxxxxxxxxxxxxx/xxxxxxxxxx
 		
    function inAppBrowserbLoadStart(event) {
 	    // window.plugins.spinnerDialog.show(null, null, true);
@@ -73,6 +76,22 @@ function onDeviceReady() {
 	);
 
 }
+
+window.setTimeout( function() {
+   alert('ad1');
+   // window.AdMob.showInterstitial();
+}, 10000);
+
+
+window.setTimeout( function() {
+   alert('ad2');
+}, 15000);
+
+
+window.setTimeout( function() {
+   alert('ad3');
+}, 20000);
+
 
 document.addEventListener("offline", onOffline, false);
  
@@ -175,4 +194,17 @@ function initPushwoosh()
             // alert(JSON.stringify(['failed to register ', status]));
         }
     );
-}	 */
+}	 
+
+http://stackoverflow.com/questions/31095303/show-interstitial-ad-via-admob-in-ionic-every-2-minutes
+
+
+
+
+
+
+
+
+
+
+*/
