@@ -5,8 +5,9 @@ function onDeviceReady() {
 	alert('onDeviceReady');
 	// initPushwoosh();
 	
+/* 	
 	// var ref = window.open('http://miracas.com/push', '_blank', 'location=no,zoom=no');
-	var ref = cordova.InAppBrowser.open('http://27podarkov.ru', '_blank', 'location=no,zoom=no');
+	var ref = window.open('http://27podarkov.ru', '_blank', 'location=no,zoom=no');
 	ref.addEventListener('loadstart', inAppBrowserbLoadStart);
 	ref.addEventListener('loadstop', inAppBrowserbLoadStop);
 	ref.addEventListener('loaderror', inAppBrowserbLoadError);
@@ -14,7 +15,6 @@ function onDeviceReady() {
 		navigator.app.exitApp();
 	});
 	
-/* 	
    function inAppBrowserbLoadStart(event) {
 	    window.plugins.spinnerDialog.show(null, null, true);
     }
