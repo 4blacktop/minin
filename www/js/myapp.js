@@ -6,16 +6,24 @@ function onDeviceReady() {
 	// initPushwoosh();
 	
 	// var ref = window.open('http://miracas.com/push', '_blank', 'location=no,zoom=no');
-	var ref = cordova.InAppBrowser.open('http://27podarkov.ru', '_blank', 'location=no,zoom=no');
+	// var ref = cordova.InAppBrowser.open('http://27podarkov.ru', '_blank', 'location=no,zoom=no');
+	var ref = cordova.InAppBrowser.open('https://google.com', '_blank', 'location=no,zoom=no');
 	ref.addEventListener('loadstart', inAppBrowserbLoadStart);
 	ref.addEventListener('loadstop', inAppBrowserbLoadStop);
 	ref.addEventListener('loaderror', inAppBrowserbLoadError);
 	ref.addEventListener('exit', function() {
 		
-		// navigator.app.exitApp();
 		
 	function onPrompt(results) {
 			alert("You selected button number " + results.buttonIndex + " and entered " + results.input1);
+			
+			if (results.buttonIndex == 2) {
+			  alert( 'You choose Exit' );
+			// navigator.app.exitApp();
+			} else {
+			  alert( 'You choose Stay' ); 
+			}
+			
 		}
 
 		navigator.notification.prompt(
